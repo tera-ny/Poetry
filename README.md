@@ -5,7 +5,7 @@ Provides an interface to the AppleMusic API
 ## Installation
 dependencies: 
 ```package.swift
-.package(url: "https://github.com/g4zeru/Poetry.git", from: "0.0.1")
+.package(url: "https://github.com/g4zeru/Poetry.git", from: "0.0.2")
 ```
 targets:
 ```package.swift
@@ -20,14 +20,14 @@ targets:
 - [x] Music Video
 - [x] Playlist
 - [x] Apple Music Station
-- [ ] Search
+- [x] Search
 - [ ] Rating
 - [ ] Chart
 - [x] Music Genre
 - [x] Curator
-- [ ] Recommendation
-- [ ] Activity
-- [ ] History
+- [x] Recommendation
+- [x] Activity
+- [x] History
 
 ## Roadmap
 - [ ] Support for all models
