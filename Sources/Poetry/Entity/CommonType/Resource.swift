@@ -11,5 +11,5 @@ public protocol Resource: Decodable {
     var href: String? { get }
     var id: String { get }
     var relationships: Relationships? { get }
-    var type: PoetryType { get }
+    var type: ResourceType { get }
 }

@@ -34,7 +34,7 @@ public struct Album: Resource {
     }
     
     public let id: String
-    public let type: PoetryType
+    public let type: ResourceType
     public let href: String?
     public let attributes: Attributes?
     public let relationships: Relationships?

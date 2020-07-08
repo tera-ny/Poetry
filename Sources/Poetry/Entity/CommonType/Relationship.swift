@@ -33,3 +33,5 @@ public typealias LibraryArtistRelationship = Relationship<LibraryArtist>
 public typealias LibraryTrackRelationship = Relationship<LibraryTrack>
 
 public typealias StationRelationship = Relationship<Station>
+
+public typealias AnyMediaResourceRelationship = Relationship<AnyMediaResource>

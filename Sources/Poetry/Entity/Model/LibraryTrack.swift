@@ -19,7 +19,7 @@ extension LibraryTrack: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let singleValueContainer = try decoder.singleValueContainer()
-        if let value = try container.decodeIfPresent(PoetryType.self, forKey: .type) {
+        if let value = try container.decodeIfPresent(ResourceType.self, forKey: .type) {
             switch value {
             case .librarySongs:
                 self = .song(try singleValueContainer.decode(LibrarySong.self))

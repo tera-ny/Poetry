@@ -16,12 +16,19 @@ public struct Artist: Resource {
         public let genres: GenreRelationship?
         public let musicVideos: MusicVideoRelationship?
         public let playlists: PlaylistRelationship?
-        public let station: StationRelationship?
+        public let stations: StationRelationship?
+        public enum CodingKeys: String, CodingKey {
+            case albums
+            case genres
+            case musicVideos = "music-videos"
+            case playlists
+            case stations
+        }
     }
     
     public let href: String?
     public let id: String
-    public let type: PoetryType
+    public let type: ResourceType
     public let attributes: Attributes?
     public let relationships: Relationships?
 }

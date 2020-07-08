@@ -1,15 +1,23 @@
 //
-//  Track.swift
+//  File.swift
+//  
+//
+//  Created by iniad on 2020/07/07.
 //
 
 import Foundation
 
-public enum Track {
+public enum AnyMediaResource {
     case song(Song)
     case musicVideo(MusicVideo)
+    case album(Album)
+    case station(Station)
+    case librarySong(LibrarySong)
+    case libraryAlbum(LibraryAlbum)
+    case libraryMusicVideo(LibraryMusicVideo)
 }
 
-extension Track: Decodable {
+extension AnyMediaResource: Decodable {
     enum CodingKeys: String, CodingKey {
         case type
     }
@@ -22,6 +30,16 @@ extension Track: Decodable {
                 self = .song(try singleValueContainer.decode(Song.self))
             case .musicVideos:
                 self = .musicVideo(try singleValueContainer.decode(MusicVideo.self))
+            case .albums:
+                self = .album(try singleValueContainer.decode(Album.self))
+            case .stations:
+                self = .station(try singleValueContainer.decode(Station.self))
+            case .librarySongs:
+                self = .librarySong(try singleValueContainer.decode(LibrarySong.self))
+            case .libraryAlbums:
+                self = .libraryAlbum(try singleValueContainer.decode(LibraryAlbum.self))
+            case .libraryMusicVideos:
+                self = .libraryMusicVideo(try singleValueContainer.decode(LibraryMusicVideo.self))
             default:
                 throw DecodingError.dataCorrupted(DecodingError.Context(
                     codingPath: container.codingPath,
@@ -36,3 +54,5 @@ extension Track: Decodable {
         }
     }
 }
+
+public typealias History = AnyMediaResource

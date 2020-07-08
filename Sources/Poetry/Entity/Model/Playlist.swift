@@ -32,5 +32,5 @@ public struct Playlist: Resource {
     public let href: String?
     public let id: String
     public let relationships: Relationships?
-    public let type: PoetryType
+    public let type: ResourceType
 }

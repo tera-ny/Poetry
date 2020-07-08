@@ -39,3 +39,20 @@ public typealias LibraryArtistResponse = Response<Artist>
 public typealias LibrarySongResponse = Response<Song>
 
 public typealias StationResponse = Response<Station>
+
+public typealias ActivityResponse = Response<Activity>
+
+public typealias HistoryResponse = Response<History>
+
+public typealias RecentlyAddedResponse = HistoryResponse
+
+public typealias SearchResponse = Response<SearchResults>
+
+public typealias LibrarySearchResponse = Response<LibrarySearchResults>
+
+public struct SearchHintsResponse: Decodable {
+    public let results: SearchHints
+    public let errors: [String]
+    public let href: String?
+    public let next: String?
+}

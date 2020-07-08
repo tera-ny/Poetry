@@ -31,7 +31,7 @@ public struct MusicVideo: Resource {
     }
     public let href: String?
     public let id: String
-    public let type: PoetryType
+    public let type: ResourceType
     public let attributes: Attributes?
     public let relationships: Relationships?
 }

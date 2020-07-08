@@ -17,7 +17,7 @@ public struct Station: Resource {
     
     public struct Relationships: Decodable {}
     
-    public let type: PoetryType
+    public let type: ResourceType
     public let attributes: Attributes?
     public let href: String?
     public let id: String
